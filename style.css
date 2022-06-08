@@ -1,0 +1,503 @@
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
+
+/* Text */ 
+
+.heading {
+    font-size: 1.5rem; 
+    margin-bottom: 20px; 
+}
+
+.subheading {
+    font-size: 1.5rem; 
+    margin-bottom: 20px; 
+}
+
+.text-basic {
+    font-size: 1.1rem; 
+    line-height: 1.5; 
+    color: gray; 
+    margin-bottom: 20px; 
+}
+
+.text-large {
+    font-size: 1.3rem; 
+    line-height: 1.5; 
+    color: gray; 
+    margin-bottom: 20px; 
+}
+
+/* Navigation */ 
+nav {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.top-row, .bottom-row {
+    padding: 15px; 
+}
+
+.top-row {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    width: 90px; 
+    margin: 0; 
+}
+
+.logo img {
+    width: 100%; 
+}
+
+.line {
+    height: 2px; 
+    margin: 2px; 
+}
+
+.gray {
+    background-color: gray; 
+}
+
+.black {
+    background-color: black; 
+}
+
+.long {
+    width: 25px; 
+}
+
+.medium {
+    width: 20px; 
+}
+
+.short {
+    width: 16px; 
+}
+
+.bottom-row {
+    display: flex; 
+    flex-direction: column;
+    gap: 10px; 
+    display: none; 
+}
+
+.bottom-row a {
+    text-decoration: none; 
+}
+
+/* Hero */ 
+
+.hero {
+    min-height: 60vh; 
+    border: 1px solid black; 
+    position: relative; 
+}
+
+.slide-container {
+    position: relative; 
+    min-height: 60vh; 
+    overflow: hidden; 
+}
+
+.hero .slide:nth-of-type(1) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),  url("https://glcsolutions.ca/wp-content/uploads/2018/04/Optimized-glc-home-empowering-businesses.jpg");
+}
+
+.hero .slide:nth-of-type(2) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://glcsolutions.ca/wp-content/uploads/2018/04/Optimized-glc-home-partnership.jpg")
+}
+
+.hero .slide {
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-size: 100% 100%; 
+    background-position: center; 
+    /*display: flex;*/ 
+    transition: all ease-in-out 250ms; 
+    border: 1px solid black; 
+}
+
+.hero .slide .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    text-align: center;  
+    padding: 20px;
+    height: 100%; 
+}
+
+.hero h2 {
+    line-height: 1.5; 
+    font-size: 2rem; 
+}
+
+.hero button {
+    padding: 15px; 
+    margin: 15px; 
+}
+
+.hero .label {
+    position: absolute; 
+    bottom: 5%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 3; 
+    display: flex; 
+    gap: 10px; 
+}
+
+.hero .labels {
+    width: 10px; 
+    height: 10px; 
+    background-color: white; 
+    border-radius: 50%; 
+}
+
+.hero .label .picked {
+    transform: scale(1.5); 
+    background-color: blue; 
+}
+
+.right-button {
+    position: absolute; 
+    font-size: 2rem; 
+    padding: 5px; 
+    background-color: white; 
+    z-index: 3; 
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    display: none; 
+}
+
+.left-button {
+    position: absolute; 
+    font-size: 2rem; 
+    padding: 5px; 
+    background-color: white; 
+    z-index: 3; 
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    display: none; 
+}
+
+.shown {
+    z-index: 2; 
+}
+
+.slide-left {
+    transform: translateX(-100%); 
+}
+
+.slide-from-right {
+    animation: slide-in-from-right ease-in-out 250ms; 
+}
+
+.text-rise {
+    animation: text-rise ease-in-out 1s forwards; 
+}
+
+@keyframes slide-in-from-right {
+    from {
+        transform: translateX(100%);
+    } 
+    to {
+        transform: translateX(0%); 
+    }
+}
+
+@keyframes slide-in-from-left {
+    from {
+        transform: translateX(-100%);
+    } 
+    to {
+        transform: translateX(0%); 
+    }
+}
+
+@keyframes slide-out-from-right {
+    from {
+        transform: translateX(0);
+    } 
+    to {
+        transform: translateX(100%); 
+    }
+}
+
+@keyframes slide-out-from-left {
+    from {
+        transform: translateX(0%);
+    } 
+    to {
+        transform: translateX(-100%); 
+    }
+}
+
+@keyframes text-rise {
+    from {
+        opacity: 0; 
+        transform: translateY(100%); 
+    }
+    to {
+        opacity: 1; 
+        transform: translateY(0%); 
+    }
+}
+
+/* Approach */ 
+
+.approach {
+    padding: 50px 10px; 
+    text-align: center; 
+}
+
+.logo {
+    width: 80px; 
+    margin: 20px auto; 
+}
+
+.logo img {
+    width: 100%; 
+}
+
+/* Partnerships*/
+
+.partnerships {
+    padding: 30px 10px; 
+    text-align: center; 
+}
+
+.gallery-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+}
+
+.company img {
+    width: 100%; 
+}
+
+/* Testimonials */ 
+
+.testimonials {
+    padding: 30px 10px 0px 10px; 
+    text-align: center; 
+}
+
+.client {
+    width: 160px; 
+    margin: 20px auto; 
+}
+
+.client img {
+    width: 100%; 
+}
+
+.testimonial{
+    border-bottom: 1px solid gray; 
+}
+
+/* Graph */ 
+
+.graph {
+    min-height: 20vh; 
+    background: url("https://glcsolutions.ca/wp-content/uploads/2018/04/graph-alt.png")
+}
+
+/* Consult */ 
+
+.consult {
+    background-color: #0a77bd; 
+    padding: 30px 10px 50px 10px; 
+    text-align: center;
+}
+
+.consult .text-large {
+    color: white; 
+    font-weight: bold;
+}
+
+.consult button {
+    padding: 10px; 
+    color: white; 
+    background-color: #0a77bd; 
+    border: 1px solid white; 
+    font-size: 1.2rem; 
+}
+
+/* Footer */ 
+
+footer {
+    background-color: #232323; 
+    color: white; 
+    text-align: center;
+}
+
+footer a {
+    color: white; 
+    text-decoration: none; ;
+}
+
+footer .link-list {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    padding: 10px; 
+    gap: 5px; 
+}
+
+@media screen and (min-width: 770px) {
+    /* Text */ 
+
+    /* Hero */ 
+    .right-button, .left-button {
+        display: block; 
+    }
+    .hero, .slide-container {
+        min-height: 100vh; 
+    }
+    .text h2 {
+        font-size: 3.3rem; 
+    }
+    .text button {
+        font-size: 1.2rem; 
+    }
+    /* Approach */ 
+    .approach-container {
+        width: 770px; 
+        margin: 0 auto; 
+    }
+    .heading {
+        font-size: 1.8rem; 
+    }
+    .text-large {
+        font-size: 1.5rem; 
+    }
+    .card-container {
+        display: flex; 
+        gap: 20px; 
+    }
+    /* Partnerships */ 
+    .partnerships-container {
+        width: 450px; 
+        margin: 0 auto; 
+    }
+    .gallery-container {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+    /* Testimonials */ 
+    .testimonials-container {
+        width: 770px; 
+        margin: 0 auto; 
+    }
+    .client-container {
+        display: flex; 
+        gap: 10px; 
+    }
+    .testimonial {
+        border-bottom: none; 
+    }
+    /* Footer */ 
+    footer {
+        display: flex; 
+        justify-content: center;
+        gap: 30px; 
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    nav {
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /*background: none;*/ 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        z-index: 10; 
+        border-bottom: 1px solid white; 
+        transition: all ease-in-out 250s; 
+        background-color: transparent; 
+    }
+    .fixed {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        background-color: white; 
+        z-index: 200; 
+        animation: nav-drop ease-in-out 500ms forwards; 
+    }
+    .fixed::before {
+        content: ""; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-color: white; 
+        z-index: -1;  
+    }
+    @keyframes nav-drop {
+        from {
+            transform: translateY(-100%); 
+        }
+        to {
+            transform: translateY(0%); 
+        }
+    }
+    nav.fixed .bottom-row a {
+        color: black; 
+    }
+    .burger {
+        display: none; 
+    }
+    .bottom-row {
+        display: flex; 
+        flex-direction: row;
+        gap: 20px; 
+    }
+    .bottom-row a {
+        color: white; 
+    }
+    /* containers */ 
+    .approach-container, .testimonials-container {
+        width: 950px; 
+    }
+    .partnerships-container {
+        width: 550px; 
+    }
+}
+@media screen and (min-width: 1250px) {
+    /* Hero */
+    .text {
+        width: 80%; 
+        margin: 0 auto; 
+    }
+    .text h2 {
+        font-size: 4.5rem; 
+    }
+    /* Containers*/ 
+    .approach-container {
+        width: 1250px; 
+        padding: 50px 10px; 
+    }
+    /* Text */ 
+    .heading {
+        font-size: 2.2rem; 
+    }
+}
